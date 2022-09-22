@@ -61,8 +61,8 @@ main{
     padding: 14px 30px;
     border-radius: 16px;
     box-shadow: 0 0 100px 8px var(--Lightgrayishblue1);
-    height: 840px;
-    overflow: hidden;
+    height: min-content;
+    
 }
 
 .notifications-header{
@@ -101,7 +101,21 @@ main{
     border-radius: 8px;
 }
 
+.message-box{
+    border: solid 1px var(--Lightgrayishblue2);
+    border-radius: 5px;
+    color: var(--Darkgrayishblue);
+    padding: 16px 20px;
+    margin-top: 10px;
+}
+
+.image-container{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row-reverse;
+}
 .avatar-container{
+    align-self: flex-start;
     overflow: hidden;
     height: var(--AvatarSize);
     width: var(--AvatarSize);
@@ -124,4 +138,17 @@ main{
 
 .date{
     color: var(--Grayishblue);
+}
+
+@media screen and (max-width: 600px) {
+    :root{
+        font-size: 14px;
+        --AvatarSize:38px;
+    }
+    body{
+        padding: 0;
+    }
+    main{
+        padding: 12px;
+    }
 }
